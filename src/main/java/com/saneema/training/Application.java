@@ -10,7 +10,7 @@ class Application {
         System.out.println("Inside application");
     }
 
-    private int countWords(String sentence) {
+    public int countWords(String sentence) {
         String[] words = StringUtils.split(sentence, ' ');
         return words == null ? 0 : words.length;
     }
