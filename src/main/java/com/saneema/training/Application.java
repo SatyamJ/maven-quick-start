@@ -1,11 +1,18 @@
 package com.saneema.training;
 
+import org.apache.commons.lang3.StringUtils;
+
 import java.util.List;
 import java.util.ArrayList;
 
 class Application {
     public Application() {
         System.out.println("Inside application");
+    }
+
+    private int countWords(String sentence) {
+        String[] words = StringUtils.split(sentence, ' ');
+        return words == null ? 0 : words.length;
     }
 
     private void greet() {
@@ -18,5 +25,7 @@ class Application {
         System.out.println("Starting Application...");
         Application application = new Application();
         application.greet();
+        int wordCount = application.countWords("I'm a four word.");
+        System.out.println("wordCount = " + wordCount);
     }
 }
